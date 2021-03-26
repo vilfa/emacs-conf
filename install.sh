@@ -31,7 +31,7 @@ then
 	if [ "$replace" == "y" ] || [ "$replace" == "Y" ] || [ "$replace" == "yes" ] 
 	then
 		rm -rf $HOME/.emacs.d
-		mkdir -p $HOME/.emacs.d/themes && cp -r .emacs.d $HOME/.emacs.d  
+		mkdir -p $HOME/.emacs.d/themes && cp -r .emacs.d/* $HOME/.emacs.d  
 		echo "replaced existing ~/.emacs.d ..."
 	else
 		echo "skipped existing ~/.emacs.d ..."
@@ -41,7 +41,7 @@ else
 	read create
 	if [ "$create" == "y" ] || [ "$create" == "Y" ] || [ "$create" == "yes" ]
 	then
-		mkdir -p $HOME/.emacs.d/themes && cp -r .emacs.d $HOME/.emacs.d
+		mkdir -p $HOME/.emacs.d/themes && cp -r .emacs.d/* $HOME/.emacs.d
 		echo "created .emacs.d dir ..."
 	else
 		echo "skipped ..."
