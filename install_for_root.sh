@@ -34,8 +34,8 @@ then
     read replace
     if [ "$replace" == "y" ] || [ "$replace" == "Y" ] || [ "$replace" == "yes" ] 
     then
-	rm -rf /root/.
-	mkdir -p /root/.emacs.d/themes && cp -r .emacs.d/* /root/.emacs.d
+	rm -rf /root/.emacs.d
+	mkdir -p /root/.emacs.d && cp -r .emacs.d/* /root/.emacs.d
 	echo "replaced existing root user ~/.emacs.d ..."
     else
 	echo "skipped existing root user ~/.emacs.d ..."
@@ -45,7 +45,7 @@ else
     read create
     if [ "$create" == "y" ] || [ "$create" == "Y" ] || [ "$create" == "yes" ]
     then
-	mkdir -p /root/.emacs.d/themes && cp -r .emacs.d/* /root/.emacs.d
+	mkdir -p /root/.emacs.d && cp -r .emacs.d/* /root/.emacs.d
 	echo "created root user .emacs.d dir ..."
     else
 	echo "skipped ..."
