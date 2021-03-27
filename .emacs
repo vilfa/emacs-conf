@@ -22,6 +22,9 @@
 ;;(add-to-list 'initial-frame-alist (cons 'height frame-default-height))
 ;;(add-to-list 'initial-frame-alist (cons 'width frame-default-width))
 
+;; Set default font
+(set-frame-font "monospace 10" nil t)
+
 ;; Set themes directory
 (add-to-list 'custom-theme-load-path
     (file-name-as-directory ".emacs.d/themes"))
